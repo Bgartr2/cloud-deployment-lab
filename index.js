@@ -27,9 +27,9 @@ app.get('/', (request, response) => {
 app.get('/greeting', (request, response) => {
   // FIXME: If a name is not given, the app says 'Hello undefined'
   const message;
-  if(request.query.name == null)
+  if(`${request.query.name}` === null)
     {
-        message = "Hello World!";
+        message = `Hello World!`;
     }
     else
     {
